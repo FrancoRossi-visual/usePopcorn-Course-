@@ -64,13 +64,14 @@ export default function App() {
         <NumberOfResults numberOfResults={movies.length} />
       </NavBar>
       <Main>
-        <Box>
+        {/* <Box>
           <MovieList movies={movies} />
         </Box>
+
         <Box>
           <Summary watched={watched} />
           <WatchedList watched={watched} />
-        </Box>
+        </Box> */}
       </Main>
     </>
   );
@@ -92,22 +93,16 @@ function Box({ children }) {
     </div>
   );
 }
-// function WatchedBox() {
-//   const [watched, setWatched] = useState(tempWatchedData);
-//   const [isOpen2, setIsOpen2] = useState(true);
+
+// function Box({ children }) {
+//   const [isOpen, setIsOpen] = useState(true);
 
 //   return (
 //     <div className='box'>
-//       <button
-//         className='btn-toggle'
-//         onClick={() => setIsOpen2((open) => !open)}>
-//         {isOpen2 ? '–' : '+'}
+//       <button className='btn-toggle' onClick={() => setIsOpen((open) => !open)}>
+//         {isOpen ? '–' : '+'}
 //       </button>
-//       {isOpen2 && (
-//         <>
-
-//         </>
-//       )}
+//       {isOpen && children}
 //     </div>
 //   );
 // }
